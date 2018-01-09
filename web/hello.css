@@ -1,0 +1,28 @@
+h1 {
+  color: #2E0138;
+}
+
+h2 {
+  color: #481054;
+}
+
+h3 {
+  color: #632770;  
+}
+
+li {
+  color: #80478C;
+  list-style: none;
+}
+
+body {
+  text-align: center;
+  background-color: #E4D3E8;
+}
+
+img {
+  border: 10px solid #80478C;
+  border-radius: 5%;
+  width: 30%;
+  overflow: hidden;
+}
