@@ -1,7 +1,6 @@
 function grow() {
   document.getElementById("menu").style.padding = "50px";
   setTimeout(bold, 100);
-  setTimeout(shrink, 500);
 }
 
 function bold() {
