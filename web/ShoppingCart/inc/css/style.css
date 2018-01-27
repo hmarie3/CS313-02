@@ -1,0 +1,22 @@
+.parallax-container {
+  height: 250px;
+}
+.rounded {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; /* future proofing */
+	-khtml-border-radius: 10px; /* for old Konqueror browsers */
+}
+.input-floating {
+	border-radius: 5%;
+}
+
+#vcart {
+	position: absolute;
+	z-index: 100;
+	top: 56px;
+	right: 15%;
+	padding: 1em;
+	opacity: 0.9;
+	width: 70%;
+}
