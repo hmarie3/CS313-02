@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping</title>
+  </head>
+
+  <body>
+    <form method="POST" action="results.php">
+
+      <!-- Notice that each checkbox has the same name and that there are square brackets, []'s, in the name. This tells PHP that they should treated as an array of values -->
+      Add Images to buy<br />
+      <input type="checkbox" name="cart[]" id="cart-truck" value="Truck"><label for="cart-truck">Click to Buy</label><br />
+      <input type="checkbox" name="cart[]" id="cart-duck" value="Duck"><label for="cart-duck">Click to Buy</label><br />
+      
+      //<input type="checkbox" name="places[]" id="place-ant" value="Antarctica"><label for="place-ant">Antarctica</label><br />
+      <br />
+
+      <input type="submit" value="View Cart">
+
+
+    </form>
+
+  </body>
+
+</html>
