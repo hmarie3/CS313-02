@@ -1,0 +1,51 @@
+#highScoreTable {
+   position: fixed;
+   top: 15px;
+   right: 15px;
+   border: 1px solid black;
+   border-collapse: collapse;
+   margin: 5px;
+   padding: 5px;
+   overflow: hidden;
+}
+
+table tr {
+   border-bottom: 1px solid black;
+}
+
+table td, th {
+   margin: 5px;
+   padding: 10px;
+   text-align: center;
+}
+
+.card {
+  border: solid black 1px;
+  height: 150px;
+  width: 150px;
+  margin: 5px;
+  display: flex;
+  justify-content: flex-end; /*tring to get the button centered on the bottom*/
+  flex-flow: column wrap-reverse;
+  background-color: green;
+}
+
+#displayCase {
+  border: solid red 1px;
+  width: 646px;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+#signUp, input {
+  margin: 5px;
+  padding: 5px;
+}
+
+.content {
+  text-align: center;
+  font-family: sans-serif;
+}
