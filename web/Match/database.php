@@ -2,7 +2,6 @@
 
    function connect_db() {
       $dbUrl = getenv('DATABASE_URL');
-      echo $dbUrl;
       if (empty($dbUrl)) {
          try {
             $user = 'heather';
@@ -16,19 +15,19 @@
       }  
       else {
          $dbopts = parse_url($dbUrl);
-
+         print_r($dbopts);
          $dbHost = $dbopts["host"];
          $dbPort = $dbopts["port"];
          $dbUser = $dbopts["user"];
          $dbPassword = $dbopts["pass"];
          $dbName = ltrim($dbopts["path"],'/');
-
+/*
          try {
             $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
          }
          catch (PDOException $ex) {
          die();
-         }
+         }*/
       }
    }
 
