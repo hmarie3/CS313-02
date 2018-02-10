@@ -15,7 +15,6 @@
       }  
       else {
          $dbopts = parse_url($dbUrl);
-         print_r($dbopts);
          $dbHost = $dbopts["host"];
          $dbPort = $dbopts["port"];
          $dbUser = $dbopts["user"];

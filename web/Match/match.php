@@ -41,7 +41,7 @@
    }
       print_r($statement);
 
-   $db = null;
+   //$db = null;
 ?>
 
    </table> 
