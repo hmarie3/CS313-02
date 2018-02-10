@@ -34,6 +34,7 @@
 <?php
    $db = connect_db(); 
    $statement = $db->query('SELECT * FROM scores INNER JOIN match_users ON scores.userid = match_users.userid;');
+   print_r($statement);
    while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
       echo('<tr><td>' . $row["scoreid"] . '</td>');
       echo('<td>' . $row["username"] . '</td>');
