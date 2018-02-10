@@ -1,6 +1,7 @@
 <?php
    include_once "database.php";
    include_once "functions.php";
+   include_once "queries.php";
 ?>
 
 <!DOCTYPE html>
@@ -32,14 +33,13 @@
       </tr>
 
 <?php
-   $db = connect_db(); 
-   $statement = $db->query('SELECT * FROM scores INNER JOIN match_users ON scores.userid = match_users.userid;');
-   while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+   $db = getCategories(); 
+   foreach ($db as $key=>$row) {
       echo('<tr><td>' . $row["scoreid"] . '</td>');
       echo('<td>' . $row["username"] . '</td>');
       echo('<td>' . $row["highscore"] . '</td></tr>');
    }
-      print_r($statement);
+      print_r($db);
 
    //$db = null;
 ?>
