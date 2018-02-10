@@ -22,7 +22,7 @@
          $dbName = ltrim($dbopts["path"],'/');
 
          try {
-          $db = new PDO("pgsql:host=ec2-174-129-22-84.compute-1.amazonaws.com;port=5432;dbname=d3l3oftili3v9q;vbylfivxsqxagr;58b951ffe2071531901b78e683429ad0b585cc0b05e9590592a7e12f66406503");
+          $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword");
          }
          catch (PDOException $ex) {
           print "<p>error: $ex->getMessage() </p>\n\n";
