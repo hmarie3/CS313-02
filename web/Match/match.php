@@ -33,20 +33,14 @@
       </tr>
 
 <?php
-   $db = getCategories();
-   while ($row = $db->fetch(PDO::FETCH_ASSOC)) {
+   $db = getCategories(); 
+   foreach ($db as $key=>$row) {
       echo('<tr><td>' . $row["scoreid"] . '</td>');
       echo('<td>' . $row["username"] . '</td>');
       echo('<td>' . $row["highscore"] . '</td></tr>');
    }
-   /*foreach ($db as $key=>$row) {
-      echo('<tr><td>' . $row["scoreid"] . '</td>');
-      echo('<td>' . $row["username"] . '</td>');
-      echo('<td>' . $row["highscore"] . '</td></tr>');
-   }
-      print_r($db);*/
 
-   $db = null;
+   //$db = null;
 ?>
 
    </table> 

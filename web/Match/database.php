@@ -2,7 +2,7 @@
 
    function connect_db() {
       $dbUrl = getenv('DATABASE_URL');
-      if (!isset($dbUrl) || empty($dbUrl)) {
+      if (empty($dbUrl)) {
          try {
             $user = 'heather';
             $password = '33433233';
@@ -23,7 +23,6 @@
 
          try {
           $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-          $db->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
          }
          catch (PDOException $ex) {
           print "<p>error: $ex->getMessage() </p>\n\n";
