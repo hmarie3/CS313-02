@@ -46,6 +46,7 @@ while ($row = $statement->fetch(PDO::FETCH_ASSOC))
    echo $row['verse'] . '</strong>' . ' - ' . $row['content'];
    echo '</p>';
 }
+
 ?>
 
 
