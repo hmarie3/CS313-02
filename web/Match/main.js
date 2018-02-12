@@ -1,11 +1,23 @@
-// onclick of any "card" 
 
-//keep click count
 
-// if count is 0 or 1 display picture of div id + ".jpg"
+function alertMe(myCard) {
+   var cardShowing = false
 
-// if count is 2 reset count to 0 and see if div ids match
+// if card is not showing display picture of div id + ".jpg" and set showing to true
+   if (cardShowing == false) {
+      myCard.innerHTML = '<img src="' + myCard.id + '.jpg" />';
+      cardShowing = true;
+   }
+// if card is showing remove/hide card and set showing to false
+   else (cardShowing == true) {
+      myCard.innerHTML = '';
+      cardShowing = false;
+   }
+}
 
-// if they match add 5 points to score and turn div white
 
-// if they don't turn div green and take 1 point away
+
+// if 2 cards are displayed check match 
+//yes +5pts, turn cards white
+//no -1pt, turn card green
+

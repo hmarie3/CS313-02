@@ -19,7 +19,7 @@
       $_SESSION['cardNum'] = [1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0];
       for ($x = 0; $x < 12; $x++) {
    ?>      
-         <div class="card" id="<?php makeCardID(); ?>"></div>
+         <div class="card" id="<?php makeCardID(); ?>" onclick= "alertMe(this);"></div>
    <?php      
       }
    ?>
