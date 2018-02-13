@@ -24,7 +24,6 @@
 
          try {
           $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-          echo("<h1>$db</h1>");
          }
          catch (PDOException $ex) {
           print "<p>error: $ex->getMessage() </p>\n\n";
