@@ -2,7 +2,7 @@
 
    function connect_db() {
       $dbUrl = getenv('DATABASE_URL');
-      echo $dbUrl;
+      echo("Printing database URL: $dbUrl");
       if (empty($dbUrl)) {
          try {
             $user = 'heather';
