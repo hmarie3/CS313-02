@@ -1,6 +1,6 @@
 
 
-function alertMe(myCard) {
+function flipCard(myCard) {
    var cardShowing = false;
 
 // if card is not showing display picture of div id + ".jpg" and set showing to true
@@ -9,10 +9,10 @@ function alertMe(myCard) {
       cardShowing = true;
    }
 // if card is showing remove/hide card and set showing to false
-   else (cardShowing == true) {
-      myCard.innerHTML = '';
-      cardShowing = false;
-   }
+   //else (cardShowing == true) {
+   //   myCard.innerHTML = '';
+     // cardShowing = false;
+   //}
 }
 
 

@@ -2,6 +2,9 @@
    include_once "database.php";
    include_once "functions.php";
    include_once "queries.php";
+   if(isset($_SESSION['user'])){
+
+
 ?>
 
 <!DOCTYPE html>
@@ -9,6 +12,7 @@
 <head>
    <title>Match</title>
    <link rel="stylesheet" type="text/css" href="main.css" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="main.js"></script>
 </head>
 <body>
@@ -19,7 +23,7 @@
       $_SESSION['cardNum'] = [1 => 0, 2 => 0, 3 => 0, 4 => 0, 5 => 0, 6 => 0];
       for ($x = 0; $x < 12; $x++) {
    ?>      
-         <div class="card" id="<?php makeCardID(); ?>" onclick= "alertMe(this);"></div>
+         <div class="card" id="<?php makeCardID(); ?>" onclick= "flipCard(this);"></div>
    <?php      
       }
    ?>
@@ -46,3 +50,10 @@
    </table> 
 </body>
 </html>
+
+<?php
+   }
+   else{
+      header('location: signUp.php');
+   }
+?>
