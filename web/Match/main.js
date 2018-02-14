@@ -1,7 +1,7 @@
 
 
 function alertMe(myCard) {
-   var cardShowing = false
+   var cardShowing = false;
 
 // if card is not showing display picture of div id + ".jpg" and set showing to true
    if (cardShowing == false) {
