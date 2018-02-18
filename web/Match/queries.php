@@ -30,7 +30,8 @@ function logIn($username, $password) {
    $stmt->bindValue(':username', $username);
    $stmt->bindValue(':password', $password);
    $stmt->execute();
-   $categories = $stmt->fetchAll();
+   $categories = $stmt->fetch(PDO::FETCH_ASSOC);
+      //print_r($categories);
    $stmt->closeCursor();
    return $categories;
 }

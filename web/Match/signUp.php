@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Sign Up</title>
+   <title>Welcome to Match</title>
    <link rel="stylesheet" type="text/css" href="main.css" />
    <script src="main.js"></script>
 </head>
