@@ -2,9 +2,7 @@
    include_once "database.php";
    include_once "functions.php";
    include_once "queries.php";
-   if(isset($_SESSION['user'])){
-
-
+   if($_SESSION['loggedIn'] == true){
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +10,7 @@
 <head>
    <title>Match</title>
    <link rel="stylesheet" type="text/css" href="main.css" />
+   <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
    <script src="main.js"></script>
 </head>
@@ -28,6 +27,18 @@
       }
    ?>
    </div><!-- end displayCase --> 
+
+   <table id="thisGameScore">
+   <tr>
+      <th>User Name</th>
+      <th>Score</th>
+   </tr>
+   <tr>
+      <td><?php echo($_SESSION["username"]); ?></td>
+      <!--somehow display score-->
+      <td id="score">0</td>
+   </tr>
+
 
    <table id="highScoreTable">
       <tr>

@@ -1,3 +1,67 @@
+body {
+   background-image: url("background.jpg");
+   background-color: black;
+   background-repeat: repeat-y;
+   background-size: 100%;
+   background-position: center;
+   background-attachment: fixed;
+   color: #5cadac;
+   font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3 {
+  background-color: rgba(36, 36, 36, 0.8);
+  display: inline-block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin: 7px;
+  border-radius: 50px;
+}
+
+input {
+  color: #5cadac;
+  background-color: rgba(36, 36, 36, 0.8);
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin: 7px;
+  border-radius: 25px;
+  border-color: #000000;
+  border-style: none;
+}
+
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+:-moz-placeholder {
+   font-style: italic;  
+}
+::-moz-placeholder {
+   font-style: italic;  
+}
+:-ms-input-placeholder {  
+   font-style: italic; 
+}
+
+.submit {
+  border-style: ridge;
+  border-color: rgba(36, 36, 36, 0.8);
+}
+
+label {
+  color: #5cadac;
+  background-color: rgba(36, 36, 36, 0.8);
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+  margin: 7px;
+  border-radius: 25px;
+}
+
 #highScoreTable {
    position: fixed;
    top: 15px;
@@ -7,7 +71,19 @@
    margin: 5px;
    padding: 5px;
    overflow: hidden;
+   background-color: rgba(36, 36, 36, 0.8);
 }
+
+#thisGameScore {
+   position: fixed;
+   top: 115px;
+   right: 15px;
+   border: 1px solid black;
+   border-collapse: collapse;
+   margin: 5px;
+   padding: 5px;
+   overflow: hidden;
+   background-color: rgba(36, 36, 36, 0.8);}
 
 table tr {
    border-bottom: 1px solid black;
@@ -20,18 +96,23 @@ table td, th {
 }
 
 .card {
-  border: solid black 1px;
+  /*border: solid black 1px;*/
   height: 150px;
   width: 150px;
   margin: 5px;
   display: flex;
   justify-content: flex-end; /*tring to get the button centered on the bottom*/
   flex-flow: column wrap-reverse;
-  background-color: green;
+  background-color: #5cadac;
+  border-radius: 25px;
+}
+
+img {
+  border-radius: 25px;
 }
 
 #displayCase {
-  border: solid red 1px;
+  /*border: solid black 1px;*/
   width: 646px;
   margin: 5px;
   padding: 5px;
@@ -47,5 +128,5 @@ table td, th {
 
 .content {
   text-align: center;
-  font-family: sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
