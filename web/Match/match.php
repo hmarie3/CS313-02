@@ -63,8 +63,11 @@
 </html>
 
 <?php
-   }
-   else{
+      //if(isset($_POST['finalScore'])) {
+      //   addScore($_POST['finalScore'], $_SESSION['userId']);
+      //}
+
+   } else {
       header('location: signUp.php');
    }
 ?>

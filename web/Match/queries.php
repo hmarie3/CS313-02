@@ -36,4 +36,17 @@ function logIn($username, $password) {
    return $categories;
 }
 
+//finish addSore
+function addScore($finalScore, $userid) {
+   $db = connect_db();
+   $sql = 'INSERT INTO scores(highscore) VALUES(:highscore) WHERE userid = :userid AND highscore < :highscore';
+   $stmt = $db->prepare($sql);
+   $stmt->bindValue(':userid', $userid);
+   $stmt->bindValue(':highscore', $finalScore);
+   $stmt->execute();
+   $categories = $stmt->fetch(PDO::FETCH_ASSOC);
+   $stmt->closeCursor();
+   return $categories;  
+}
+
 ?>

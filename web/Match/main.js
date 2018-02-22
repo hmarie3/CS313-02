@@ -55,7 +55,20 @@ function flipCard(myCard) {
                removeCard(activeCards[0]);
                removeCard(activeCards[1]);
                if (gameOver() == true) {
-               //if yes use jquery ajax to send score to php 
+               //if yes use jquery ajax to send score to php
+                  var finalScore = $('#score').val();
+                  $.ajax({
+                     type: "POST",
+                     url: "gameOver.php",
+                     data: {finalScore:score},
+                     dataType: "JSON",
+                     done: function(data) {
+                        alert("data sent successfully");
+                     },
+                     fail: function(err) {
+                        alert("there was an error");
+                     }
+                  });
                   //alert("game Over");
                }
             }
