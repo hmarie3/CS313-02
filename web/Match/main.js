@@ -13,7 +13,7 @@ function gameOver() {
 }
 
 function activate(card) {
-   alert('card activated');
+   //alert('card activated');
    $(card).addClass('active');
    //alert($(card).attr('id'));
    $(card).html('<img src="' + $(card).attr('id') + '.jpg" />');
@@ -44,23 +44,26 @@ function flipCard(myCard) {
          case 1:
             break;
          case 2:
-         alert('case 2');
+         //alert('case 2');
             var activeCards = document.querySelectorAll('.active');
             if(activeCards[0].id == activeCards[1].id) {
-               alert('match');
+               //alert('match');
                score += 5;
                document.getElementById('score').innerHTML = score;
-               deactivate(activeCards[0]);
-               deactivate(activeCards[1]);
-               removeCard(activeCards[0]);
-               removeCard(activeCards[1]);
+               setTimeout(function() { deactivate(activeCards[0]) }, 2000);
+               setTimeout(function() { deactivate(activeCards[1]) }, 2000);
+               setTimeout(function() { removeCard(activeCards[0]) }, 2000);
+               setTimeout(function() { removeCard(activeCards[1]) }, 2000);
                if (gameOver() == true) {
                //if yes use jquery ajax to send score to php
                   var finalScore = $('#score').val();
                   $.ajax({
                      type: "POST",
                      url: "gameOver.php",
-                     data: {finalScore:score},
+                     data: {
+                        finalScore:score,
+                        userid:userid
+                     },
                      dataType: "JSON",
                      done: function(data) {
                         alert("data sent successfully");
@@ -73,13 +76,13 @@ function flipCard(myCard) {
                }
             }
             else {
-               alert('no match');
+               //alert('no match');
                if (score > 0) {
                   score -= 1;
                         document.getElementById('score').innerHTML = score;
                }
-               deactivate(activeCards[0]);
-               deactivate(activeCards[1]);
+               setTimeout(function() { deactivate(activeCards[0]) }, 2000);
+               setTimeout(function() { deactivate(activeCards[1]) }, 2000);
             }
             break;
 //         case 2:

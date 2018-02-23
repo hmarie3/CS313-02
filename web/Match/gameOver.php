@@ -3,6 +3,8 @@
    include_once "functions.php";
    include_once "queries.php";
    if($_SESSION['loggedIn'] == true){
+   addScore($_POST['finalScore'], $_POST['userid']);
+
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +36,9 @@
 </html>
 
 <?php
+   
+     // addScore($_POST['finalScore'], $_POST['userid']);
+
 
    } else {
       header('location: signUp.php');

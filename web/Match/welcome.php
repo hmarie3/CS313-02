@@ -14,8 +14,6 @@
 </head>
 <body>
    <div class="content">
-      <h1>Welcome! <?php echo($_SESSION['username']); ?></h1><br>
-      <h2>Thank you for playing with us.</h2><br>
 
 <?php
    if(isset($_POST['email'])) {

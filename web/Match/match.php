@@ -64,7 +64,7 @@
 
 <?php
       //if(isset($_POST['finalScore'])) {
-      //   addScore($_POST['finalScore'], $_SESSION['userId']);
+      //addScore($_POST['finalScore'], $_POST['userid']);
       //}
 
    } else {
