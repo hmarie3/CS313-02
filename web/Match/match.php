@@ -1,7 +1,13 @@
 <?php
-   include_once "database.php";
-   include_once "functions.php";
-   include_once "queries.php";
+##############################################################################################################
+#  Author: Heather Brune
+#  Summary: This is the main game page. PHP loops to create the cards. The high score table is commented out
+#           because I was unable to get it working.
+##############################################################################################################
+include_once "database.php"; #for database connection only
+include_once "functions.php"; #for match card creation
+include_once "queries.php"; #for database interaction only
+
    if($_SESSION['loggedIn'] == true){
 ?>
 
@@ -26,7 +32,7 @@
    <?php      
       }
    ?>
-   </div><!-- end displayCase --> 
+   </div>
 
    <table id="thisGameScore">
    <tr>
@@ -35,11 +41,10 @@
    </tr>
    <tr>
       <td><?php echo($_SESSION["username"]); ?></td>
-      <!--somehow display score-->
       <td id="score">0</td>
    </tr>
 
-
+<!--
    <table id="highScoreTable">
       <tr>
          <th>Place</th>
@@ -48,17 +53,18 @@
       </tr>
 
 <?php
-   $db = getCategories(); 
-   foreach ($db as $key=>$row) {
-      echo('<tr><td>' . $row["scoreid"] . '</td>');
-      echo('<td>' . $row["username"] . '</td>');
-      echo('<td>' . $row["highscore"] . '</td></tr>');
+#   $db = getCategories(); 
+#   foreach ($db as $key=>$row) {
+#      echo('<tr><td>' . $row["scoreid"] . '</td>');
+#      echo('<td>' . $row["username"] . '</td>');
+#      echo('<td>' . $row["highscore"] . '</td></tr>');
    }
 
-   //$db = null;
 ?>
 
-   </table> 
+   </table>
+-->
+
 </body>
 </html>
 

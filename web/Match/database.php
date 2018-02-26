@@ -1,4 +1,8 @@
 <?php
+##############################################################################################################
+#  Author: Heather Brune
+#  Summary: This page contains the function to call the database and connect to localhost and Heroku.
+##############################################################################################################
 
    function connect_db() {
       $dbUrl = getenv('DATABASE_URL');

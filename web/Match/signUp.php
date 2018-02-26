@@ -1,6 +1,11 @@
 <?php
-   include_once "database.php";
-   include_once "functions.php";
+##############################################################################################################
+#  Author: Heather Brune
+#  Summary: This is the first page to visit the site. An account must be created and will be stored for log 
+#           in later. Once signed up or logged you will be directed to the welcome page.
+##############################################################################################################
+include_once "database.php"; #for database connection only
+include_once "functions.php"; #for match card creation
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +26,7 @@
          <label>Password: </label><input type="password" name="password" placeholder="must be 8 characters..."><br>
          <input type="submit" class="submit" name="submit" value="Sign Me Up!">
       </form>
+
       <h2>Returning Users</h2><br>
       <h2>Sign In</h2>
       <form id="signIn" action="welcome.php" method="post">
