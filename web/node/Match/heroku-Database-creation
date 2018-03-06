@@ -1,0 +1,21 @@
+CREATE TABLE match_users (
+    userid serial NOT NULL,
+    username varchar(20) NOT NULL,
+    email varchar(50) NOT NULL,
+    password varchar(8) NOT NULL,
+    PRIMARY KEY (userid)
+);
+
+CREATE TABLE scores (
+    scoreid serial NOT NULL,
+    userid int NOT NULL,
+    highscore int NOT NULL,
+    date date NOT NULL
+);
+
+
+INSERT INTO scores (userid, highscore, date)
+VALUES (1, 25, '12/25/2017');
+
+INSERT INTO match_users (username, email, password)
+VALUES ('hmb', 'thistime@gmail.com', '43this45');
