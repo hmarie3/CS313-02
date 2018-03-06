@@ -114,6 +114,7 @@ table td, th {
 
 img {
   border-radius: 25px;
+  max-height: 150px;
 }
 
 #displayCase {
