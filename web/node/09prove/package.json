@@ -2,6 +2,10 @@
   "name": "09prove",
   "version": "1.0.0",
   "description": "This is my app for 09prove.",
+     "engines": {
+     "node": "6.11.1",
+     "node": "8.9.1"
+   },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

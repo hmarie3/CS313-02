@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.set('view engine', 'ejs');
+app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(req, res) {
    res.render('home');
