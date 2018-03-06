@@ -27,6 +27,8 @@ include_once "queries.php"; #for database interaction only
       $currentUser = addUser($_POST['username'], $_POST['email'], $_POST['password']);
       $_SESSION['username'] = $_POST['username'];
       $_SESSION['email'] = $_POST['email'];
+      $_SESSION['loggedIn'] = true;
+
 ?>
       
       <h1>Welcome! <?php echo($_SESSION['username']); ?></h1><br>

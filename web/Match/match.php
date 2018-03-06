@@ -72,8 +72,8 @@ include_once "queries.php"; #for database interaction only
       //if(isset($_POST['finalScore'])) {
       //addScore($_POST['finalScore'], $_POST['userid']);
       //}
-
-   } else {
+ 
+   else {
       header('location: signUp.php');
    }
 ?>
